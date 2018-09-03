@@ -28,17 +28,17 @@ const Service = class {
       return result;
     }
 
-    get = ( path, options ) => {
+    get = ( path, options = {} ) => {
       options.method = 'GET';
       return this.makeRESTRequest( path, options );
     }
 
-    post = ( path, options ) => {
+    post = ( path, options = {} ) => {
       options.method = 'POST';
       return this.makeRESTRequest( path, options );
     }
 
-    put = ( path, options ) => {
+    put = ( path, options = {} ) => {
       options.method = 'PUT';
       return this.makeRESTRequest( path, options );
     }
