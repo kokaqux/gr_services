@@ -4,6 +4,8 @@
   ],
   "plugins": [
     "add-module-exports",
-    "transform-object-entries"
+    "transform-object-entries",
+    "transform-es2015-arrow-functions",
+    ["transform-class-properties", { "spec": true }]
   ]
 }
