@@ -45,4 +45,4 @@ const Service = class {
 }
 
 
-export default Service;
+module.exports = Service;
