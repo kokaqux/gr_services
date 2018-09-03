@@ -17,7 +17,7 @@ const Service = class {
     }
 
     makeRESTRequest = async ( path, options ) => {
-      uri = `${this.url}${path}`;
+      let uri = `${this.url}${path}`;
       
       if(!_.isEmpty(options.query)) {
         uri += `?${qs.stringify(options.query)}`
