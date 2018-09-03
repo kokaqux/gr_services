@@ -1,7 +1,24 @@
 {
+  "name": "gr-services",
+  "version": "1.0.1",
   "engines": {
     "node": ">=4.2.4"
   },
+  "main": "./dist/index.js",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kokaqux/gr_services.git"
+  },
+  "author": "Praveen Koka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kokaqux/gr_services/issues"
+  },
+  "homepage": "https://github.com/kokaqux/gr_services#readme",
+  "description": "",
   "dependencies": {
     "request-promise": "^4.2.2"
   }

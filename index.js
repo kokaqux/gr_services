@@ -1,4 +1,4 @@
-import request from 'request-promise';
+const request = require('request-promise');
 
 const Service = class {
     constructor(config) {
