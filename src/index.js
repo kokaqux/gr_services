@@ -1,4 +1,6 @@
 import request from 'request-promise';
+import qs from 'querystring';
+import _ from 'lodash';
 
 const Service = class {
     constructor(config) {
@@ -15,7 +17,12 @@ const Service = class {
     }
 
     makeRESTRequest = async ( path, options ) => {
-      const uri = `${this.url}${path}`;
+      uri = `${this.url}${path}`;
+      
+      if(!_.isEmpty(options.query)) {
+        uri += `?${qs.stringify(options.query)}`
+      }
+      
       options.uri = uri;
       options.json = true;
 
