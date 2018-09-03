@@ -1,4 +1,4 @@
-const request = require('request-promise');
+import request from 'request-promise';
 
 const Service = class {
     constructor(config) {
@@ -14,7 +14,7 @@ const Service = class {
       else this.debug = () => {};
     }
 
-    async makeRESTRequest ( path, options ) {
+    makeRESTRequest = async ( path, options ) => {
       const uri = `${this.url}${path}`;
       options.uri = uri;
       options.json = true;
@@ -28,21 +28,21 @@ const Service = class {
       return result;
     }
 
-    get ( path, options ) {
+    get = ( path, options ) => {
       options.method = 'GET';
       return this.makeRESTRequest( path, options );
     }
 
-    post ( path, options )  {
+    post = ( path, options ) => {
       options.method = 'POST';
       return this.makeRESTRequest( path, options );
     }
 
-    put ( path, options ) {
+    put = ( path, options ) => {
       options.method = 'PUT';
       return this.makeRESTRequest( path, options );
     }
 }
 
 
-module.exports = Service;
+export default Service;
